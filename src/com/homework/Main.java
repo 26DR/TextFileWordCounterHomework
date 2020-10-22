@@ -1,6 +1,7 @@
 package com.homework;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -59,7 +60,7 @@ public class Main {
         List<String> linesOfText = Collections.emptyList();
 
         try{
-            linesOfText = Files.readAllLines(Paths.get(fileName), StandardCharsets.US_ASCII);
+            linesOfText = Files.readAllLines(Paths.get(fileName), Charset.defaultCharset());
         } catch (IOException e) {
             e.printStackTrace();
         }
